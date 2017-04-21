@@ -1,0 +1,31 @@
+<DOCTYPE html>
+    <head>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<script>
+$(document).ready(function() {
+    $('.datepicker').datepicker({
+ monthNames: ['Январь', 'Февраль', 'Март', 'Апрель',
+'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь',
+'Октябрь', 'Ноябрь', 'Декабрь'],
+ dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+        dateFormat:'dd.mm.yy',
+ firstDay: 1,
+beforeShowDay: $.datepicker.noWeekends,
+        minDate: "+1",
+        constrainInput: true,
+        showOn: 'button',
+});
+
+});
+
+</script>
+    </head>
+    <body>
+<form action="" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Create" />
+</form>
+    </body>
+</DOCTYPE>
